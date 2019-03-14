@@ -2,6 +2,7 @@ import toNumericText as toNum
 from time import sleep
 from os import system
 import RSA_CryptoSystem as __rsa
+import ElGamal_CryptoSystem as __elg
 
 def runRSA_cryptosystem():
     system("cls")
@@ -18,5 +19,15 @@ def runRSA_cryptosystem():
             break
     
 def runElGamal_cryptosystem():
-    print("Running elgamal Cryptosystem")
-    sleep(2)
+    system("cls")
+    while(1):
+        print("1. For ElGamal Encryption")
+        print("2. For ElGamal Decryption")
+        print("0. To Go Back")
+        enc_choice = int(input("Enter choice: "))
+        if (enc_choice == 1):
+            __elg.runEncryption()
+        elif (enc_choice == 2):
+            __elg.runDecryption()
+        elif (enc_choice == 0):
+            break

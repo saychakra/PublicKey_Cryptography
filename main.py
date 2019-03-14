@@ -1,4 +1,4 @@
 import loadingScreen as lScreen
 import welcomeScreen as ws
-lScreen.loadScreen()
+# lScreen.loadScreen()
 ws.runWelcomeScreen()
