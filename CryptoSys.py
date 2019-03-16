@@ -35,8 +35,6 @@ def runElGamal_cryptosystem():
                     __elg.main()
                 elif second_choice == 0:
                     return
-        elif choice == 2:
-            runElGamal_cryptosystem()
         elif choice == 0:
             break
         else:

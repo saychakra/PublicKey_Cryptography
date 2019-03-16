@@ -16,7 +16,7 @@ def encryptionDecryption():
         print("Welcome to public key cryptography")
         print("1. RSA Cryptosystem")
         print("2. ElGamal Cryptosystem")
-        print("0. To EXIT")
+        print("0. To Go Back")
         crypt_choice = int(input("Choose your input: "))
         
         if (crypt_choice == 1):
@@ -34,8 +34,7 @@ def digitalSignature():
         print("1. RSA Digital Signature")
         print("2. ElGamal Digital Signature")
         print("0. To EXIT")
-        print("Choose your input: ", end = " ")
-        ds_choice = int(input())
+        ds_choice = int(input("Choose your input: "))
         if (ds_choice == 1):
             dsig.runRSA_digitalSignature()
             break
