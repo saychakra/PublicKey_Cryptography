@@ -1,7 +1,7 @@
 from os import system
 import platform
-import CryptoSys as crypt
 import digitalSignature as dsig
+import CryptoSys as crypt
 
 def checkPlatform():
      # detecting platform os to write the proper clear screen
@@ -24,7 +24,6 @@ def encryptionDecryption():
             break
         elif (crypt_choice == 2):
             crypt.runElGamal_cryptosystem()
-            break
         elif (crypt_choice == 0):
             return
 

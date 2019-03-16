@@ -3,9 +3,10 @@ from time import sleep
 from os import system
 import RSA_CryptoSystem as __rsa
 import ElGamal_CryptoSystem as __elg
+import welcomeScreen as ws
 
 def runRSA_cryptosystem():
-    system("cls")
+    system(ws.checkPlatform())
     while(1):
         print("1. For RSA Encryption")
         print("2. For RSA Decryption")
@@ -19,7 +20,7 @@ def runRSA_cryptosystem():
             break
     
 def runElGamal_cryptosystem():
-    system("clear")
+    system(ws.checkPlatform())
     while(1):
         print("1. Run encryption/decryption")
         print("0. To Go Back")
@@ -27,7 +28,7 @@ def runElGamal_cryptosystem():
         if choice == 1:
             __elg.main()
             while(1):
-                print("1. Rerun ElGamal Encryption/Decryption")
+                print("\n\n1. Rerun ElGamal Encryption/Decryption")
                 print("0. To Go Back")
                 second_choice = int(input("Enter the choice: "))
                 if second_choice == 1:

@@ -1,7 +1,8 @@
 import random
 from os import system
 from math import pow
-  
+# from welcomeScreen import checkPlatform
+
 a = random.randint(2, 10) 
   
 def gcd(a, b): 
@@ -64,7 +65,7 @@ def decrypt(en_msg, p, key, q):
   
 # Driver code 
 def main(): 
-    system("clear")
+    system("cls")
     print("Please enter a single word for encryption. ")
     print("NOTE: Do not enter a full sentence")
     msg = input("Enter the message for encryption: ")  
