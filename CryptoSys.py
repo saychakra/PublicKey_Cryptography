@@ -19,15 +19,25 @@ def runRSA_cryptosystem():
             break
     
 def runElGamal_cryptosystem():
-    system("cls")
+    system("clear")
     while(1):
-        print("1. For ElGamal Encryption")
-        print("2. For ElGamal Decryption")
+        print("1. Run encryption/decryption")
         print("0. To Go Back")
-        enc_choice = int(input("Enter choice: "))
-        if (enc_choice == 1):
-            __elg.runEncryption()
-        elif (enc_choice == 2):
-            __elg.runDecryption()
-        elif (enc_choice == 0):
+        choice = int(input("Enter the choice: "))
+        if choice == 1:
+            __elg.main()
+            while(1):
+                print("1. Rerun ElGamal Encryption/Decryption")
+                print("0. To Go Back")
+                second_choice = int(input("Enter the choice: "))
+                if second_choice == 1:
+                    __elg.main()
+                elif second_choice == 0:
+                    return
+        elif choice == 2:
+            runElGamal_cryptosystem()
+        elif choice == 0:
             break
+        else:
+            print("Wrong Choice. Enter again:")
+            continue

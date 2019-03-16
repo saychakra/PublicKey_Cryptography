@@ -80,7 +80,7 @@ def encrypt(pk, plaintext):
     return cipher
 
 def runEncryption():
-    system("cls")
+    system("clear")
     print("RSA CRYPTOSYSTEM ENCRYPTION: ")
     
     p, q = map(int, input("Enter two numbers which are co-prime (separated by space): ").strip().split())
