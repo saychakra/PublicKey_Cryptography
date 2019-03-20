@@ -1,5 +1,6 @@
 from math import gcd
 import sympy as sp # for checking if a number is prime or not
+from os import system
 
 def find_e(z: int):
     e = 2
@@ -39,10 +40,11 @@ def run_rsa(p: int,q: int, msg: str):
     print("Decrypted message: ", plain_text)
 
 def main():
+    system("cls")
     p,q = map(int, input("Enter two coprime numbers (eg. 53 59) (separated by a space): ").split())
     print("You can enter any text, any word or a sentence.")
     msg = input("Enter the text: ")
     run_rsa(p, q, msg)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

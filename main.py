@@ -9,8 +9,8 @@ print("############ Operating System used and preferred: Windows 10 (64 bit) ###
 print("\nChecking your Operating System . . .")
 os_ver = platform.system()
 if os_ver == 'Windows':
-    print("OS: Windows")
-    sleep(2)
+    print("\nOS: Windows")
+    sleep(1)
     system("cls")
 elif os_ver == 'Linux':
     print("OS: Linux")
@@ -20,9 +20,11 @@ print("Checking your python version... ")
 sleep(1)
 cmd_out = system("python3 --version")
 if (cmd_out == 0):
-    print("You are are good to go!")
+    print("\nYou are are good to go!")
+    sleep(1)
+    system("cls")
     print("Preparing the program . . . Please wait . . .")
-    sleep(5)
+    sleep(2)
     system("cls")
 else:
     print("Please install python 3 and then continue or check if python3 is installed by any other name")
@@ -34,7 +36,7 @@ cmd_out2 = system("python3 -m pip install sympy")
 if cmd_out2 == 0:
     print("\nAll modules installed!")
     print("\nPlease wait . . . DO NOT EXIT . . .")
-    sleep(4)
+    sleep(2)
     system("cls")
     lScreen.loadScreen()
     ws.runWelcomeScreen()
