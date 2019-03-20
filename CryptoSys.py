@@ -8,14 +8,11 @@ import welcomeScreen as ws
 def runRSA_cryptosystem():
     system(ws.checkPlatform())
     while(1):
-        print("1. For RSA Encryption")
-        print("2. For RSA Decryption")
+        print("1. Run encryption/decryption")
         print("0. To Go Back")
         enc_choice = int(input("Enter choice: "))
         if (enc_choice == 1):
-            __rsa.runEncryption()
-        elif (enc_choice == 2):
-            __rsa.runDecryption()
+            __rsa.main()
         elif (enc_choice == 0):
             break
     
