@@ -12,7 +12,6 @@ def checkPlatform():
         return "clear"
 
 def encryptionDecryption():
-    system(checkPlatform())
     while(True):
         system(checkPlatform())
         print("Welcome to public key cryptography")
@@ -26,8 +25,9 @@ def encryptionDecryption():
             break
         elif (crypt_choice == 2):
             crypt.runElGamal_cryptosystem()
+            break
         elif (crypt_choice == 0):
-            return      
+            break
 
 def digitalSignature():
     while(True):
@@ -59,4 +59,5 @@ def runWelcomeScreen():
         elif (inp == 2):
             digitalSignature()
         elif (inp == 0):
-            exit()
+            break
+    exit()

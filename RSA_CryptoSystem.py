@@ -1,7 +1,10 @@
 from math import gcd
-import sympy as sp # for checking if a number is prime or not
+# from sympy import isprime # for checking if a number is prime or not
 from os import system
 from time import sleep
+
+def isprime(n):
+    return all(n%j for j in range(2, int(n**0.5)+1)) and n>1
 
 def find_e(z: int):
     e = 2
@@ -44,7 +47,7 @@ def main():
     while(1):
         system("cls")
         p,q = map(int, input("Enter two coprime numbers (eg. 53 59) (separated by a space): ").split())
-        if (sp.isprime(p) and sp.isprime(q)):
+        if (isprime(p) and isprime(q)):
             print("You can enter any text, any word or a sentence.")
             msg = input("Enter the text: ")
             run_rsa(p, q, msg)
