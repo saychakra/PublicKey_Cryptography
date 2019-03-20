@@ -1,6 +1,7 @@
 from math import gcd
 import sympy as sp # for checking if a number is prime or not
 from os import system
+from time import sleep
 
 def find_e(z: int):
     e = 2
@@ -22,7 +23,7 @@ def run_rsa(p: int,q: int, msg: str):
     e = find_e(z)
     d = find_d(e, z)
 
-    print("Encrypting message . . .")
+    print("\nEncrypting message . . .")
     # Converting plaintext to ciphertext
     cipher_text = ""
     # C = (P ^ e) % n
@@ -31,7 +32,7 @@ def run_rsa(p: int,q: int, msg: str):
         cipher_text += chr((ch ** e) % n)
     print("Encrypted message: ", cipher_text)
 
-    print("Decrypting message . . . ")
+    print("\nDecrypting message . . . ")
     # converting ciphertext to plaintext
     plain_text = ""
     for ch in cipher_text:
@@ -40,11 +41,19 @@ def run_rsa(p: int,q: int, msg: str):
     print("Decrypted message: ", plain_text)
 
 def main():
-    system("cls")
-    p,q = map(int, input("Enter two coprime numbers (eg. 53 59) (separated by a space): ").split())
-    print("You can enter any text, any word or a sentence.")
-    msg = input("Enter the text: ")
-    run_rsa(p, q, msg)
+    while(1):
+        system("cls")
+        p,q = map(int, input("Enter two coprime numbers (eg. 53 59) (separated by a space): ").split())
+        if (sp.isprime(p) and sp.isprime(q)):
+            print("You can enter any text, any word or a sentence.")
+            msg = input("Enter the text: ")
+            run_rsa(p, q, msg)
+            break
+        else:
+            print("Enter Prime numbers")
+            print("Try again")
+            sleep(3)
+            continue        
 
 # if __name__ == "__main__":
 #     main()

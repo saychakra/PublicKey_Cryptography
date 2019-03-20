@@ -13,6 +13,14 @@ def runRSA_cryptosystem():
         enc_choice = int(input("Enter choice: "))
         if (enc_choice == 1):
             __rsa.main()
+            while(1):
+                print("\n\n1. Rerun encryption/decryption")
+                print("0. To Go Back")
+                secondary_choice = int(input("Enter choice: "))
+                if(secondary_choice == 1):
+                    __rsa.main()
+                else:
+                    return
         elif (enc_choice == 0):
             break
     
