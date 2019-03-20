@@ -2,6 +2,7 @@ from os import system
 import platform
 import digitalSignature as dsig
 import CryptoSys as crypt
+from time import sleep
 
 def checkPlatform():
      # detecting platform os to write the proper clear screen
@@ -11,6 +12,7 @@ def checkPlatform():
         return "clear"
 
 def encryptionDecryption():
+    system(checkPlatform())
     while(True):
         system(checkPlatform())
         print("Welcome to public key cryptography")
@@ -25,7 +27,7 @@ def encryptionDecryption():
         elif (crypt_choice == 2):
             crypt.runElGamal_cryptosystem()
         elif (crypt_choice == 0):
-            return
+            return      
 
 def digitalSignature():
     while(True):
@@ -33,7 +35,7 @@ def digitalSignature():
         print("Welcome to public key cryptography")
         print("1. RSA Digital Signature")
         print("2. ElGamal Digital Signature")
-        print("0. To EXIT")
+        print("0. To Go Back")
         ds_choice = int(input("Choose your input: "))
         if (ds_choice == 1):
             dsig.runRSA_digitalSignature()

@@ -1,6 +1,7 @@
 import random
 from os import system
 from math import pow
+from time import sleep
 # from welcomeScreen import checkPlatform
 
 a = random.randint(2, 10) 
@@ -78,6 +79,8 @@ def main():
     print("g^a used : ", h) 
     
     en_msg, p = encrypt(msg, q, h, g) 
+    print("\n\nEncrypted Message: ", en_msg)
+    print("\n\nStarting decryption...\n")
     dr_msg = decrypt(en_msg, p, key, q) 
     dmsg = ''.join(dr_msg) 
     print("Decrypted Message :", dmsg)
