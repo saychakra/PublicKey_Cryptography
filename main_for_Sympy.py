@@ -1,3 +1,9 @@
+'''
+this main is mainly related to the verification of system and
+for automatic installation of sympy (for validating prime numbers)
+if this main is used, try to remove the isprime udf in RSA_Cryptosystem.py and replace it with sympy.isprime()
+'''
+
 from os import system
 import platform
 from time import sleep
